@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Getting Started with movie-fix App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to setup in Local
 
 In the project directory, you can run:
+
+### `npm i`
+to install all necessary packages
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Used
+* `React Js` `CSS` for UI development
+* `Redux` for state management and caching the data to reduce repetative api calls
+* `axios` for api integration
+* used some optimisation technique called `Debouncing` while searching, `Throttling` while scrolling and `caching data` using redux to reduce repetative api calls and 
+  removing old movie list from DOM to avoid jitters while scrolling
 
-### `npm test`
+## features covered
+### Layout and UI
+ * Create custom UI components for the app, using React.
+ * Display a list of movies sorted in descending order of popularity.
+ * Show the movie title, image, genre, rating and a short description related
+   to the movie in each information card.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ ### Default page load state
+  * Load a total of only 20 movies for each year 
+  * By default, when a user lands on the page, display a list of movies of the year 2012
+  * Implement smooth scrolling behavior to load more movies as the user scrolls in any direction 
+  * As and when the user scrolls and movies are added to the list, make sure that
+   this interaction is smooth and doesn’t cause any jitters.  
 
-### `npm run build`
+### Genre Filter
+ * Provide a filter UI that allows users to filter movies by genre.
+ * When a user selects one or more genres, the list should only display movies of the selected genres.
+### Bonus (Optional)
+* Ensuring smooth scrolling even when more and more movies are loaded in the DOM.
+  **(achived by removing the list of movies which are not in viewPort from DOM)**.
+* Implement a search bar which searches for the movie based on the search string
+  and displays an infinite loading list of movies which matches the search.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screen shots from local 
+   ![image](https://github.com/Akshaykumar4524/movie-fix/assets/102145959/5842541c-4680-4ea2-9a75-9e64e3b4312c)
+   ![image](https://github.com/Akshaykumar4524/movie-fix/assets/102145959/dc6279a9-640b-436d-93e6-94aaec71dd27)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
