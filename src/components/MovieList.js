@@ -20,7 +20,7 @@ const MovieList = ({ year, setLoadingList }) => {
       if (key in movieLists) {
         setMovieList(movieLists[key])
       } else {
-        const res = await fetchData(`https://api.themoviedb.org/3/discover/movie?api_key=2dca580c2a14b55200e784d157207b4d&sort_by=popularity.desc&primary_release_year=${year}&page=1&vote_count.gte=20&with_genres=${selectedGenre.toString()}`)
+        const res = await fetchData(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_TOKEN}&sort_by=popularity.desc&primary_release_year=${year}&page=1&vote_count.gte=20&with_genres=${selectedGenre.toString()}`)
         setMovieList(res?.data?.results)
         const payload = { [key]: res?.data?.results }
         dispatch(setMovieLists(payload))
