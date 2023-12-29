@@ -3,13 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to setup in Local
-
-In the project directory, you can run:
-
-### `npm i`
-to install all necessary packages
-
-### `npm start`
+* clone the repository from this link https://github.com/Akshaykumar4524/movie-fix.git or download zip folder and extract
+* navigate to project directory
+* In the project directory, you can run:
+* `npm i` to install all necessary packages
+* after installing run `npm start` to run the application
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -21,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 * used some optimisation technique called `Debouncing` while searching, `Throttling` while scrolling and `caching data` using redux to reduce repetative api calls and 
   removing old movie list from DOM to avoid jitters while scrolling
 
-## features covered
+## Features covered
 ### Layout and UI
  * Create custom UI components for the app, using React.
  * Display a list of movies sorted in descending order of popularity.
